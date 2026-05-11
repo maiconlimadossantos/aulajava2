@@ -1,30 +1,23 @@
 package Herança;
 
-import java.util.Scanner;
+public class Ingresso {
+    private double valor;
 
-public class Exercicios4_POO_Herança {
-    Scanner scanner = new Scanner(System.in);
-    
-
-    if(scanner.nextInt() == 1){
-        Normal ingressoNormal = new Normal(50.0);
-        ingressoNormal.imprimeTipo();
-    } else {
-        Vip ingressoVip = new Vip(50.0, 20.0);
-        System.out.println("Escolha o tipo de VIP: 1 para Camarote Superior e 2 para Camarote Inferior");
-        int escolhaVip = scanner.nextInt();
-        if (escolhaVip == 1) {
-            CamaroteSuperior camaroteSuperior = new CamaroteSuperior(50.0, 20.0, "Camarote Superior");
-            System.out.println("Ingresso VIP - " + camaroteSuperior.getLocalizacao());
-            camaroteSuperior.imprimeValor();
-        } else {
-            CamaroteInferior camaroteInferior = new CamaroteInferior(50.0, 20.0, "Camarote Inferior");
-            System.out.println("Ingresso VIP - " + camaroteInferior.getLocalizacao());
-            camaroteInferior.imprimeValor();
-        }
+    public Ingresso(double valor) {
+        this.valor = valor;
     }
-
+    public double getValor() {
+        return valor;
+    }
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+    public void imprimeValor() {
+        System.out.println("Valor do ingresso: R$ " + valor);
+    }
+    
 }
+
 /*Crie uma classe chamada Ingresso que possui um valor em reais e um método
 imprimeValor().
 a. crie uma classe VIP, que herda Ingresso e possui um valor adicional. Crie um
@@ -39,4 +32,4 @@ No método main: crie um ingresso. Peça para o usuário digitar 1 para normal e
 VIP. Conforme a escolha do usuário, diga se o ingresso é do tipo normal ou VIP. Se
 for VIP, peça para ele digitar 1 para camarote superior e 2 para camarote inferior.
 Conforme a escolha do usuário, diga se que o VIP é camarote superior ou inferior.
-Imprima o valor do ingresso.
+Imprima o valor do ingresso. */
