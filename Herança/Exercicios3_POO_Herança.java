@@ -9,15 +9,11 @@ public class Exercicios3_POO_Herança {
         Cachorro cachorro = new Cachorro("Rex", 5, "Labrador");
         Gato gato = new Gato("Mia", 3, "Siamês");
         
-        System.out.println(cachorro.exibirDados());
-        System.out.println(gato.exibirDados());
+        System.out.println(cachorro.caminhar());
+        System.out.println(gato.caminhar());
         
-        // Exercício 2
-        Normal ingressoNormal = new Normal(50.0);
-        Vip ingressoVip = new Vip(50.0, 20.0);
         
-        ingressoNormal.imprimeTipo();
-        System.out.println("Valor do Ingresso VIP: " + ingressoVip.getValorVip());
+        
     }
     
 }
