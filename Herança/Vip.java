@@ -3,7 +3,7 @@ package Herança;
 public class Vip extends Ingresso {
     private double valorAdicional;
 
-    public Vip(double valor, double valorAdicional) {
+    public Vip(String nome, double valor, double valorAdicional) {
         super(valor);
         this.valorAdicional = valorAdicional;
     }
