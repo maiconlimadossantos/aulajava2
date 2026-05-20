@@ -1,25 +1,33 @@
-public class Exercicios10_POO_Herança {
-    public static void main(String[] args) {
-        Funcionario10 f1 = new Funcionario10(1, "João", 3000.0);
-        Funcionario10 f2 = new Funcionario10(2, "Maria", 3500.0);
-        Funcionario10 f3 = new Funcionario10(3, "Pedro", 3200.0);
+public class Funcionario10 {
+    private int id;
+    private String nome;
+    private double salario;
 
-        Gerente10 g1 = new Gerente10(nome, salario, capacidadeDepartamento)(10, "Carlos", 5000.0, 5);
-        g1.adicionar(f1);
-        g1.adicionar(f2);
-        g1.adicionar(f3);
-
-        System.out.println("Relatório do Gerente:");
-        g1.imprimirRelatorio();
-
-        System.out.println("\nAtualizando salário do funcionário com ID 2:");
-        g1.atualizar(2, "Maria Silva", 3600.0);
-        g1.imprimirRelatorio();
-
-        System.out.println("\nRemovendo funcionário com ID 3:");
-        g1.remover(3);
-        g1.imprimirRelatorio();
+    public Funcionario10(int id, String nome, double salario) {
+        this.id = id;
+        this.nome = nome;
+        this.salario = salario;
     }
+
+    public int getId() {
+        return id;
+    }
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public double getSalario() {
+        return salario;
+    }
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+    public String exibirDados() {
+        return "ID: " + id + "\nNome: " + nome + "\nSalário: R$ " + salario;
+    }
+    
 }
 /*Crie uma classe Gerente que estende de Funcionario, adicionando como atributo um vetor do tipo
 Funcionario chamado departamento e uma variável para controlar a quantidade de cadastrados. No
