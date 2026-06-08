@@ -3,7 +3,7 @@ package Interface;
 public class SeguroDeVida implements Tributavel {
     private double valorApolice;
 
-    public SeguroDeVida(double valorApolice) {
+    public SeguroDeVida() {
         this.valorApolice = valorApolice;
     }
 

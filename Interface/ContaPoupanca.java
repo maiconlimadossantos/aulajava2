@@ -3,7 +3,7 @@ package Interface;
 public class ContaPoupanca extends Conta {
     private double taxaJuros;
 
-    public ContaPoupanca(String numero, double saldo, double taxaJuros) {
+    public ContaPoupanca() {
         super(numero, saldo);
         this.taxaJuros = taxaJuros;
     }

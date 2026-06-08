@@ -3,7 +3,7 @@ package Interface;
 public class ContaCorrente extends Conta implements Tributavel{
     private double limite;
 
-    public ContaCorrente(String numero ,double saldo, double limite) {
+    public ContaCorrente() {
         super(numero,saldo);
         this.limite = limite;
     }
