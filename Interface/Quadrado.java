@@ -1,6 +1,6 @@
 package Interface;
 
-public class Quadrado {
+public class Quadrado implements AreaCalculavel {
     private double lado;
 
     public Quadrado(double lado) {
@@ -13,5 +13,8 @@ public class Quadrado {
     public void setLado(double lado) {
         this.lado = lado;
     }
-    
+   @Override
+    public double calculaArea() {
+        return lado * lado;
+    }
 }

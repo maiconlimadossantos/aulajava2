@@ -1,6 +1,6 @@
 package Interface;
 
-public class Retangulo {
+public class Retangulo implements AreaCalculavel {
     private double base;
     private double altura;
 
@@ -21,6 +21,10 @@ public class Retangulo {
     }
     public void setAltura(double altura) {
         this.altura = altura;
+    }
+    @Override   
+    public double calculaArea() {
+        return base * altura;
     }
     
 }

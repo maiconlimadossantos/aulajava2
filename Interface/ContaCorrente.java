@@ -1,6 +1,6 @@
 package Interface;
 
-public class ContaCorrente extends Conta{
+public class ContaCorrente extends Conta implements Tributavel{
     private double limite;
 
     public ContaCorrente(String numero ,double saldo, double limite) {
@@ -28,5 +28,10 @@ public class ContaCorrente extends Conta{
     public void depositar(double valor) {
         setSaldo(getSaldo() + valor);
         System.out.println("Depósito realizado com sucesso. Novo saldo: " + getSaldo());
+    }
+    @Override
+    public double calculaTributos() {
+        // 1% do saldo atual da conta
+        return this.obterSaldo() * 0.01;
     }
 }

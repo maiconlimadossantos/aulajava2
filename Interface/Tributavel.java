@@ -1,5 +1,5 @@
 package Interface;
 
-public class Tributavel {
-    
+public interface  Tributavel {
+    double calculaTributos();
 }

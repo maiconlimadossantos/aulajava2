@@ -1,6 +1,6 @@
 package Interface;
 
-public class Circulo {
+public class Circulo implements AreaCalculavel {
     private double raio;
 
     public Circulo(double raio) {
@@ -12,5 +12,9 @@ public class Circulo {
     }
     public void setRaio(double raio) {
         this.raio = raio;
+    }
+    @Override
+    public double calculaArea() {
+        return Math.PI * raio * raio;
     }
 }
